@@ -16,7 +16,67 @@
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
+	
+	<repositories>
+      <repository>
+          <id>oracle</id>
+          <url>http://www.datanucleus.org/downloads/maven2/</url>
+      </repository>
+   </repositories>  
+   
 	<dependencies>
+	
+<!-- 오라클 라이브러리 추가 -->
+      <!-- 오라클 JDBC 드라이버 -->
+      <dependency>
+         <groupId>oracle</groupId>
+         <artifactId>ojdbc6</artifactId>
+         <version>11.2.0.3</version>
+      </dependency>
+      
+      <!-- 마이바티스 관련 -->
+      <dependency>
+         <groupId>org.mybatis.spring.boot</groupId>
+         <artifactId>mybatis-spring-boot-starter</artifactId>
+         <version>2.1.4</version>
+      </dependency>
+      
+      <!-- MyBatis sql log -->
+      <dependency>
+         <groupId>org.bgee.log4jdbc-log4j2</groupId>
+         <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
+         <version>1.16</version>
+      </dependency>
+      
+	 <!-- 내장 tomcat(JSP 엔진 역할) -->
+<!--         <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>            
+        </dependency>  
+      
+       <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency> -->
+        
+        <!-- 타임리프 -->
+        <dependency>
+		  <groupId>org.springframework.boot</groupId>
+		  <artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency> 
+        
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		
+	<!-- 히카리 의존성-->
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+        
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
